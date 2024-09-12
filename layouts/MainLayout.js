@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Scroll from '@/components/Scroll';
-import CustomCursor from '@/components/CustomCursor';
 
 const MainLayout = ({ children }) => {
   return (
@@ -11,7 +10,7 @@ const MainLayout = ({ children }) => {
         {children}
       </main>
       <Scroll />
-      <CustomCursor />
+      
     </div>
   );
 };
