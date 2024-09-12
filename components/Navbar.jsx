@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const linkStyle = "text-xl font-bold uppercase text-neutral-400 relative";
+const linkStyle = "text-xl font-bold uppercase text-neutral-400 relative overflow-hidden";
 
 const navbarVariants = {
     hidden: { opacity: 0, x: '-100%' },
@@ -9,8 +9,8 @@ const navbarVariants = {
 };
 
 const linkVariants = {
-    hover: { scale: 1.1, color: "#000", transition: { duration: 0.3 } },
-    initial: { scale: 1, color: "#9CA3AF", transition: { duration: 0.3 } },
+    hover: { scale: 1.1, transition: { duration: 0.3 } },
+    initial: { scale: 1, transition: { duration: 0.3 } },
 };
 
 function Navbar() {
@@ -36,13 +36,12 @@ function Navbar() {
                         whileHover="hover"
                     >
                         {item}
-                        <motion.div 
-                            className="absolute left-0 bottom-0 w-full h-0.5 bg-neutral-500 origin-left"
+                        <motion.div
+                            className="absolute inset-0 bg-violet-700 bg-opacity-50 opacity-0 blur-sm rounded-full transition-all duration-300"
                             variants={{
-                                hover: { scaleX: 1, opacity: 1 },
-                                initial: { scaleX: 0, opacity: 0 },
+                                hover: { opacity: 0.5, scale: 1.2 },
+                                initial: { opacity: 0, scale: 1 }
                             }}
-                            transition={{ duration: 0.3 }}
                         />
                     </motion.a>
                 ))}

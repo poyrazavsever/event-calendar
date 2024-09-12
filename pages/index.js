@@ -35,7 +35,7 @@ export default function Home() {
       className="overflow-hidden"
     >
       {sections.map((section, index) => (
-        <div key={index} className={`h-screen flex items-center justify-center text-white text-4xl ${index === 0 ? 'bg-blue-500' : index === 1 ? 'bg-green-500' : 'bg-red-500'}`}>
+        <div key={index} className={`h-screen flex items-center justify-center text-white text-4xl ${index === 0 ? 'bg-neutral-950' : index === 1 ? 'bg-green-500' : 'bg-red-500'}`}>
           {section}
         </div>
       ))}
