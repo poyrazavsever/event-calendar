@@ -90,7 +90,7 @@ const CalendarComponent = () => {
   };
 
   return (
-    <div className="bg-neutral-950 border border-neutral-700 shadow-lg rounded-lg p-4 md:p-8 mt-36 mx-12 flex flex-col h-full">
+    <div className="bg-neutral-950 border border-neutral-700 shadow-lg rounded-lg p-4 md:p-8 mt-36 mx-12 flex flex-col h-full !overflow-auto">
       <div className="flex justify-start mb-4">
         <button
           onClick={() => setView('dayGridMonth')}
