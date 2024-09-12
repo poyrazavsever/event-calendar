@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import AboutProject from '../sections/AboutProject'; // Import the AboutProject component
+import FuturePlans from '../sections/FuturePlans'; // Import the FuturePlans component
+import AboutMe from '../sections/AboutMe'; // Import the AboutMe component
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
@@ -8,12 +10,8 @@ export default function Home() {
   // Define the sections with their corresponding components
   const sections = [
     <AboutProject key="about-project" />, // First section with AboutProject component
-    <div key="section2" className="flex items-center justify-center h-screen bg-neutral-800 text-white">
-      <h1 className="text-3xl">Section 2 - Gelecek Özellikler</h1>
-    </div>,
-    <div key="section3" className="flex items-center justify-center h-screen bg-neutral-700 text-white">
-      <h1 className="text-3xl">Section 3 - Hakkımda</h1>
-    </div>
+    <FuturePlans key="future-plans" />, // Second section with FuturePlans component
+    <AboutMe key="about-me" />, // Third section with AboutMe component
   ];
 
   const handleScroll = (event) => {
