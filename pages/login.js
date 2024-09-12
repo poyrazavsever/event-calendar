@@ -51,22 +51,13 @@ export default function LoginPage() {
     }
   };
 
-  useEffect(() => {
-    controls.start({
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    });
-  }, [tab]);
 
   return (
-    <div className="h-screen w-full flex items-center justify-center bg-neutral-950">
+    <div className="h-screen w-full flex items-center justify-around bg-neutral-950">
       <motion.div
         className="max-w-md w-full bg-neutral-800 bg-opacity-20 border border-neutral-700 shadow-lg rounded-lg p-8"
         animate={controls}
         style={{
-          perspective: 1000,
-          backdropFilter: "blur(10px)", // Camsı arka plan efekti
           height: "520px", // Sabit yükseklik
         }}
       >
@@ -103,7 +94,7 @@ export default function LoginPage() {
 
         <div className="pt-4">
           <motion.div
-            key={tab} // Her tab değişiminde yeni bir animasyon tetiklenir
+            key={tab}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -180,6 +171,8 @@ export default function LoginPage() {
           </motion.div>
         </div>
       </motion.div>
+
+      <div></div>
     </div>
   );
 }
