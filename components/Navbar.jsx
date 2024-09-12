@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi'; // react-icons'dan menü ikonları
 
-const linkStyle = "text-3xl font-bold uppercase text-neutral-400 relative overflow-hidden";
+const linkStyle = "text-3xl font-bold text-neutral-400 relative overflow-hidden";
 
 const navbarVariants = {
     visible: { opacity: 1 },
@@ -10,9 +10,9 @@ const navbarVariants = {
 };
 
 const links = [
-    { name: "Home.", path: '/' },
-    { name: "Calendar.", path: '/calendar' },
-    { name: "Profile.", path: '/profile' }
+    { name: "Ana Sayfa.", path: '/' },
+    { name: "Takviminiz.", path: '/calendar' },
+    { name: "Profil.", path: '/profile' }
 ];
 
 const linkVariants = {
