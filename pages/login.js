@@ -53,7 +53,13 @@ export default function LoginPage() {
 
 
   return (
-    <div className="h-screen w-full flex items-center justify-around bg-neutral-950">
+    <div className="h-screen w-full flex flex-col md:flex-row items-center gap-8 py-24 md:gap-0 md:py-0 justify-center bg-neutral-950">
+
+      <div className="relative">
+        <h1 className="text-center md:text-left text-2xl md:text-6xl font-black text-neutral-300 w-full md:w-1/2">EventNest.'e Hoş geldin!</h1>
+        <div className="absolute top-0 left-0 w-32 h-32 bg-sky-900 rounded-full blur-3xl"></div>
+      </div>
+
       <motion.div
         className="max-w-md w-full bg-neutral-800 bg-opacity-20 border border-neutral-700 shadow-lg rounded-lg p-8"
         animate={controls}
@@ -172,7 +178,6 @@ export default function LoginPage() {
         </div>
       </motion.div>
 
-      <div></div>
     </div>
   );
 }
