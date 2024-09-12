@@ -8,6 +8,21 @@ const navbarVariants = {
     hidden: { opacity: 0 },
 };
 
+const links = [
+    {
+        name : "Home.",
+        path : '/'
+    },
+    {
+        name: 'Calendar.',
+        path: '/calendar'
+    },
+    {
+        name: 'other.',
+        path: '/other'
+    },
+]
+
 const linkVariants = {
     hover: { 
         scale: 1.1, 
@@ -34,16 +49,16 @@ function Navbar() {
                 <span>EventNest.</span>
             </div>
             <div className="flex items-center gap-12">
-                {["Home.", "About.", "Services.", "Contact."].map((item) => (
+                {links.map((item, k) => (
                     <motion.a 
-                        href="#" 
-                        key={item}
+                        href={item.path}
+                        key={k}
                         className={linkStyle}
                         variants={linkVariants}
                         initial="initial"
                         whileHover="hover"
                     >
-                        {item}
+                        {item.name}
                     </motion.a>
                 ))}
             </div>
