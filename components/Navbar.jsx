@@ -39,7 +39,7 @@ const linkVariants = {
 function Navbar() {
     return (
         <motion.div 
-            className="fixed w-full backdrop-blur-md shadow-md py-6 px-12 flex justify-between items-center z-20"
+            className="fixed top-0 w-full backdrop-blur-md shadow-md py-6 px-12 flex justify-between items-center z-20"
             variants={navbarVariants}
             initial="hidden"
             animate="visible"
