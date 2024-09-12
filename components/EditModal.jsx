@@ -9,8 +9,8 @@ const EditModal = ({ task, onSave, onCancel }) => {
     };
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-neutral-900 bg-opacity-50">
-            <div className="bg-neutral-800 p-6 rounded-lg shadow-lg backdrop-blur-md">
+        <div className="fixed inset-0 flex items-center justify-center bg-neutral-900 bg-opacity-80">
+            <div className="bg-neutral-950 w-80 md:w-96 border border-neutral-800 p-6 rounded-lg shadow-lg">
                 <h2 className="text-xl mb-4">Görevi Düzenle</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
@@ -43,16 +43,16 @@ const EditModal = ({ task, onSave, onCancel }) => {
                             className="w-full p-2 bg-neutral-700 text-neutral-100 border border-neutral-600 rounded"
                         />
                     </div>
-                    <div className="flex justify-end gap-2">
+                    <div className="flex justify-start gap-2 pt-2">
                         <button
                             type="submit"
-                            className="bg-blue-600 text-neutral-100 px-4 py-2 rounded hover:bg-blue-500 transition-colors"
+                            className="bg-green-900 text-neutral-100 px-4 py-2 rounded hover:bg-green-700 transition-colors"
                         >
                             Güncelle
                         </button>
                         <button
                             onClick={onCancel}
-                            className="bg-neutral-600 text-neutral-100 px-4 py-2 rounded hover:bg-neutral-500 transition-colors"
+                            className="bg-red-900 text-neutral-100 px-4 py-2 rounded hover:bg-red-500 transition-colors"
                         >
                             İptal
                         </button>
