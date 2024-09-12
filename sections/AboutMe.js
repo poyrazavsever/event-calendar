@@ -2,7 +2,7 @@ import React from 'react';
 
 function AboutMe() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-12 h-screen bg-neutral-900 px-12 text-white">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-12 h-screen bg-neutral-950 px-12 text-white">
       <div className="flex flex-col items-start md:w-1/2 md:pr-8 mb-8 md:mb-0">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Hakkımda</h1>
         <p className="text-xl md:text-2xl leading-relaxed mb-4">
