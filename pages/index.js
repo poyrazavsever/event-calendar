@@ -1,9 +1,12 @@
 import { useEffect, useState, useRef } from 'react';
 
+// Sections
+import CalendarSection from '@/sections/Calendar';
+
 export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
   const isScrolling = useRef(false);
-  const sections = ['Section 1', 'Section 2', 'Section 3'];
+  const sections = [<CalendarSection />, 'Section 2', 'Section 3'];
 
   const handleScroll = (event) => {
     if (isScrolling.current) return;
