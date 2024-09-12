@@ -1,11 +1,11 @@
 import React from 'react'
-import CalendarSection from '@/sections/Calendar';
+import CalendarComponent from '@/components/Calendar'
 
 
 function events() {
   return (
     <div>
-        <CalendarSection />
+        <CalendarComponent />
     </div>
   )
 }
