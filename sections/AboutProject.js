@@ -3,7 +3,7 @@ import React from 'react';
 export default function AboutProject() {
   return (
     <div className="flex flex-col gap-6 items-start justify-center h-screen bg-neutral-950 px-12">
-      <h1 className="text-5xl md:text-6xl text-neutral-200 font-bold mb-4">EventNest. Projesi</h1>
+      <h1 className="text-3xl md:text-6xl text-neutral-200 font-bold mb-4">EventNest. Projesi</h1>
       <p className="text-xl text-neutral-100 leading-relaxed">
         EventNest, kullanıcıların etkinliklerini yönetmek için tasarlanmış modern bir takvim uygulamasıdır. Bu platform, 
         etkinlik ekleme, düzenleme ve silme gibi temel işlevleri kolay ve hızlı bir şekilde gerçekleştirmeye olanak tanır.
@@ -17,7 +17,6 @@ export default function AboutProject() {
         <span className="text-neutral-400">React</span> ve <span className="text-neutral-400">Next.js</span> ile oluşturulan
         uygulama, modern front-end geliştirme prensiplerine uygun olarak yapılandırılmıştır. 
         Bu teknolojilerle birlikte <span className="text-neutral-400">Tailwind CSS</span> kullanılarak stil ve tasarım süreçleri kolaylaştırılmış, 
-        tamamen responsive ve şık bir kullanıcı arayüzü oluşturulmuştur.
       </p>
       <p className="text-xl text-neutral-100 leading-relaxed text-left">
         Animasyon ve etkileşimlerde <span className="text-neutral-400">Framer Motion</span> kullanılarak 

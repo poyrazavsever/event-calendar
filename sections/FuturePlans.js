@@ -3,7 +3,7 @@ import React from 'react';
 export default function FuturePlans() {
   return (
     <div className="flex flex-col gap-6 items-start justify-center h-screen bg-neutral-900 px-12 py-16">
-      <h1 className="text-5xl md:text-6xl text-neutral-200 font-bold mb-4">Gelecekte Eklemeyi Planladıklarım</h1>
+      <h1 className="text-3xl md:text-6xl text-neutral-200 font-bold mb-4">Gelecekte Eklemeyi Planladıklarım</h1>
       <p className="text-xl md:text-2xl text-neutral-100 leading-relaxed">
         EventNest projesine eklemeyi düşündüğüm birçok yeni özellik var. İlk olarak, kullanıcıların etkinliklerini daha detaylı bir şekilde yönetebilmeleri için 
         <span className="text-neutral-400"> ileri düzey filtreleme</span> ve <span className="text-neutral-400">arama fonksiyonları</span> eklemeyi planlıyorum. Böylece kullanıcılar, etkinliklerini daha hızlı ve kolay bir şekilde bulabilecekler.

@@ -4,7 +4,7 @@ function AboutMe() {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center gap-12 h-screen bg-neutral-950 px-12 text-white">
       <div className="flex flex-col items-start md:w-1/2 md:pr-8 mb-8 md:mb-0">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Hakkımda</h1>
+        <h1 className="text-3xl md:6xl font-bold mb-4">Hakkımda</h1>
         <p className="text-xl md:text-2xl leading-relaxed mb-4">
           Merhaba! Ben Poyraz Avsever, 18 yaşındayım ve yazılım geliştirici olmayı hedefliyorum.
           UI/UX tasarımı ve frontend geliştirme konularına 4 yıldır ilgi duyuyorum. 
@@ -19,7 +19,7 @@ function AboutMe() {
           Fikirlerinizi ve projelerinizi paylaşmak için her zaman açığım.
         </p>
       </div>
-      <div className="flex-shrink-0 w-full md:w-1/3">
+      <div className="hidden md:w-1/3 md:flex">
         <img 
           src="Photo.jpg" 
           alt="Poyraz Avsever" 
