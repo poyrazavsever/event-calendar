@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 const linkStyle = "text-3xl font-bold uppercase text-neutral-400 relative overflow-hidden";
 
 const navbarVariants = {
-    hidden: { opacity: 0, x: '-100%' },
-    visible: { opacity: 1, x: '0%' },
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
 };
 
 const linkVariants = {
