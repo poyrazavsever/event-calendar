@@ -48,8 +48,8 @@ html, body {
   z-index: -1; /* Çemberin altında olacak şekilde yerleştir */
 }
 
-a, button, input {
-  cursor: none; /* Linkler ve butonlar için özel imleç */
+a, button, input, textarea, ul, li {
+  cursor: none;
 }
 
 ::-webkit-scrollbar {

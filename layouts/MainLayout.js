@@ -5,10 +5,10 @@ import { Toaster } from "react-hot-toast";
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative">
       <Toaster position="top-center" reverseOrder={false} />
       <Navbar />
-      <main className="pt-16 flex-grow">{children}</main>
+      <main>{children}</main>
       <Scroll />
     </div>
   );

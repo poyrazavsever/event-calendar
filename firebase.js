@@ -1,7 +1,7 @@
 // firebase.js
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getAuth, GoogleAuthProvider  } from "firebase/auth";
+import { getDatabase } from "firebase/database";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -12,13 +12,12 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
 
-
 // Firebase'i başlat
 const app = initializeApp(firebaseConfig);
 
-// Firestore ve Authentication modüllerini başlat
-const db = getFirestore(app);
+// Realtime Database ve Authentication modüllerini başlat
+const db = getDatabase(app);
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
-export { db, auth, googleProvider  };
+export { db, auth, googleProvider };
