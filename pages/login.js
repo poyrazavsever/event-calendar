@@ -4,6 +4,7 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   signInWithPopup,
+  onAuthStateChanged
 } from "firebase/auth";
 import { auth, googleProvider } from "../firebase"; // Firebase yapılandırma dosyanız
 import { motion, useAnimation } from "framer-motion";
@@ -19,14 +20,25 @@ export default function LoginPage() {
   const router = useRouter();
   const controls = useAnimation();
 
+  useEffect(() => {
+    // Kullanıcı oturumunu kontrol et
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        router.push("/"); // Giriş yapılmışsa ana sayfaya yönlendir
+        toast.error('Zaten giriş yapıldı.')
+      }
+    });
+    return () => unsubscribe(); // Bileşen unmount olduğunda aboneliği temizle
+  }, [router]);
+
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
       router.push("/"); // Başarılı girişte ana sayfaya yönlendir
-      toast.success("Başarılıyla Giriş yapıldı")
+      toast.success("Başarıyla Giriş Yapıldı");
     } catch (error) {
-      toast.error(error.message)
+      toast.error(error.message);
       setError(error.message);
     }
   };
@@ -36,9 +48,9 @@ export default function LoginPage() {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       router.push("/"); // Başarılı kayıt işlemi sonrası ana sayfaya yönlendir
-      toast.success("Başarılıyla Giriş yapıldı")
+      toast.success("Başarıyla Kayıt Yapıldı");
     } catch (error) {
-      toast.error(error.message)
+      toast.error(error.message);
       setError(error.message);
     }
   };
@@ -47,19 +59,19 @@ export default function LoginPage() {
     try {
       await signInWithPopup(auth, googleProvider);
       router.push("/"); // Başarılı girişte ana sayfaya yönlendir
-      toast.success("Başarılıyla Giriş yapıldı")
+      toast.success("Başarıyla Giriş Yapıldı");
     } catch (error) {
-      toast.error(error.message)
+      toast.error(error.message);
       setError(error.message);
     }
   };
 
-
   return (
     <div className="h-screen w-full flex flex-col md:flex-row items-center gap-8 py-24 md:gap-0 md:py-0 justify-center bg-neutral-950">
-
       <div className="relative">
-        <h1 className="text-center md:text-left text-2xl md:text-6xl font-black text-neutral-300 w-full md:w-1/2">EventNest.'e Hoş geldin!</h1>
+        <h1 className="text-center md:text-left text-2xl md:text-6xl font-black text-neutral-300 w-full md:w-1/2">
+          EventNest.'e Hoş geldin!
+        </h1>
         <div className="absolute top-0 left-0 w-32 h-32 bg-sky-900 rounded-full blur-3xl"></div>
       </div>
 
@@ -167,7 +179,7 @@ export default function LoginPage() {
               <div className="h-[1px] w-full bg-neutral-500"></div>
             </div>
             <motion.button
-              className="w-full py-2 bg-neutral-600 border border-neutral-700 text-white hover:bg-blue-950 transition-all rounded flex  items-center justify-center gap-3"
+              className="w-full py-2 bg-neutral-600 border border-neutral-700 text-white hover:bg-blue-950 transition-all rounded flex items-center justify-center gap-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -180,7 +192,6 @@ export default function LoginPage() {
           </motion.div>
         </div>
       </motion.div>
-
     </div>
   );
 }
