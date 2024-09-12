@@ -24,6 +24,7 @@ export default function LoginPage() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       router.push("/"); // Başarılı girişte ana sayfaya yönlendir
+      toast.success("Başarılıyla Giriş yapıldı")
     } catch (error) {
       toast.error(error.message)
       setError(error.message);
@@ -35,6 +36,7 @@ export default function LoginPage() {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       router.push("/"); // Başarılı kayıt işlemi sonrası ana sayfaya yönlendir
+      toast.success("Başarılıyla Giriş yapıldı")
     } catch (error) {
       toast.error(error.message)
       setError(error.message);
@@ -45,6 +47,7 @@ export default function LoginPage() {
     try {
       await signInWithPopup(auth, googleProvider);
       router.push("/"); // Başarılı girişte ana sayfaya yönlendir
+      toast.success("Başarılıyla Giriş yapıldı")
     } catch (error) {
       toast.error(error.message)
       setError(error.message);
