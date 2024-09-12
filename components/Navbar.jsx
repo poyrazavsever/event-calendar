@@ -18,8 +18,8 @@ const links = [
         path: '/calendar'
     },
     {
-        name: 'other.',
-        path: '/other'
+        name: 'profile.',
+        path: '/profile'
     },
 ]
 
