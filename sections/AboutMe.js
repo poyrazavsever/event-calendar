@@ -21,7 +21,7 @@ function AboutMe() {
       </div>
       <div className="hidden md:w-1/3 md:flex">
         <img 
-          src="Photo.jpg" 
+          src="Photo2.jpg" 
           alt="Poyraz Avsever" 
           className="rounded-lg shadow-lg"
         />
